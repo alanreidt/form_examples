@@ -68,6 +68,39 @@
 				</form>
 			</div>
 		</section>
+
+		<section class="section  sign-in">
+			<div class="container">
+				<header class="section__header">
+					<h2 class="section__title">Sign in form</h2>
+					<p class="section__desc"></p>
+				</header>
+
+				<form class="form" id="sign-in__form" name="sign-in-form" action="#">
+					<fieldset class="form__content">
+						<div>
+							<label class="label" for="sign-in__email">
+								Email:
+								<input class="input-field" id="sign-in__email" type="email" name="email" placeholder="louishamford@gmail.com" autocomplete="email" required>
+							</label>
+						</div>
+
+						<div>
+							<label class="label" for="sign-in__password">
+								Password:
+								<input class="input-field" id="sign-in__password" type="password" name="password" placeholder="Enter your password" autocomplete="current-password" required>
+								<a href="#" class="help">Forgot password?</a>
+							</label>
+						</div>
+
+						<div class="button-wrapper">
+							<button class="button" id="sign-in__submit">Sign in</button>
+							<button class="button  button_reset" id="sign-in__reset" type="reset">Reset</button>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</section>
 	</main>
 
 	<script src="js/app.js"></script>

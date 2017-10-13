@@ -4,59 +4,67 @@
 	<title>Form examples</title>
 	<meta charset="UTF-8">
 	<link href="css/styles.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro:600" rel="stylesheet">
 </head>
 <body class="page">
 	<main class="page__content">
 		<header class="main-header">
-			<h1 class="main-header__title">Form examples</h1>
-			<p class="main-header__desc">
-				Just samples of different forms.
-				<span class="postscript">P.S. confirm fields is used for training purposes.</span>
-			</p>
+			<div class="main-header__container">
+				<h1 class="page__title  section__title  main-header__title">Form examples</h1>
+				<p class="section__desc  main-header__desc">
+					Just samples of&nbsp;different forms. The long long long description about forms and its use cases.
+					Also about a&nbsp;life in&nbsp;different countries and travel. And several lifehacks. And that&nbsp;is. The end.
+				</p>
+
+				<p class="postscript">P.S. confirm fields are used only for training purposes.</p>
+			</div>
 		</header>
 
 
 		<section class="section  sign-up">
 			<div class="container">
 				<header class="section__header">
-					<h2 class="section__title">Sign up form</h2>
-					<p class="section__desc"></p>
+					<h2 class="page__title  section__title">Sign up form</h2>
+					<p class="section__desc">
+						Here can be&nbsp;a&nbsp;description of&nbsp;a&nbsp;sign&nbsp;up form.
+						Also, a&nbsp;description about what the information is&nbsp;needed from an&nbsp;user and why.
+					</p>
 				</header>
 
 				<form class="form" id="sign-up__form" name="sign-up-form" action="#">
-					<fieldset class="form__content">
-						<div>
-							<label class="label" for="sign-up__email">
+					<fieldset class="form__fieldset">
+						<div class="form__group">
+							<label class="form__label" for="sign-up__email">
 								Email:
-								<input class="input-field" id="sign-up__email" type="email" name="email" placeholder="louishamford@gmail.com" maxlength="25" autocomplete="email" required>
 							</label>
+							<input class="form__input-field" id="sign-up__email" type="email" name="email" placeholder="louishamford@gmail.com" maxlength="25" autocomplete="email" required>
 						</div>
 
-						<div>
-							<label class="label" for="sign-up__emailc">
+						<div class="form__group">
+							<label class="form__label" for="sign-up__emailc">
 								Confirm Email:
-								<input class="input-field" id="sign-up__emailc" type="email" name="emailC" placeholder="louishamford@gmail.com" maxlength="25" autocomplete="email" required>
+								<input class="form__input-field" id="sign-up__emailc" type="email" name="emailC" placeholder="louishamford@gmail.com" maxlength="25" autocomplete="email" required>
 							</label>
 						</div>
 
-						<div>
-							<label class="label" for="sign-up__name">
+						<div class="form__group">
+							<label class="form__label" for="sign-up__name">
 								Full Name:
-								<input class="input-field" id="sign-up__name" type="text" name="name" placeholder="Louis Hamford" inputmode="latin-name" autocomplete="name" required>
+								<input class="form__input-field" id="sign-up__name" type="text" name="name" placeholder="Louis Hamford" inputmode="latin-name" autocomplete="name" required>
 							</label>
 						</div>
 
-						<div>
-							<label class="label" for="sign-up__password">
+						<div class="form__group">
+							<label class="form__label" for="sign-up__password">
 								Password:
-								<input class="input-field" id="sign-up__password" type="password" name="password" placeholder="8+ characters" minlength="8" maxlength="30" autocomplete="new-password" required>
+								<input class="form__input-field" id="sign-up__password" type="password" name="password" placeholder="8+ characters" minlength="8" maxlength="30" autocomplete="new-password" required>
 							</label>
 						</div>
 
-						<div>
-							<label class="label" for="sign-up__passwordc">
+						<div class="form__group">
+							<label class="form__label" for="sign-up__passwordc">
 								Confirm Password:
-								<input class="input-field" id="sign-up__passwordc" type="password" name="passwordC" placeholder="8+ characters" minlength="8" maxlength="30" autocomplete="new-password" required>
+								<input class="form__input-field" id="sign-up__passwordc" type="password" name="passwordC" placeholder="8+ characters" minlength="8" maxlength="30" autocomplete="new-password" required>
 							</label>
 						</div>
 
@@ -72,24 +80,27 @@
 		<section class="section  sign-in">
 			<div class="container">
 				<header class="section__header">
-					<h2 class="section__title">Sign in form</h2>
-					<p class="section__desc"></p>
+					<h2 class="page__title  section__title">Sign in form</h2>
+					<p class="section__desc">
+						Here can be&nbsp;a&nbsp;description of&nbsp;a&nbsp;sign&nbsp;in form.
+						Also, a&nbsp;description about what the information is&nbsp;needed from an&nbsp;user and why.
+						And a&nbsp;text about something else, like a&nbsp;travel and several lifehacks. Yeah, that's enough.
+					</p>
 				</header>
 
 				<form class="form" id="sign-in__form" name="sign-in-form" action="#">
-					<fieldset class="form__content">
-						<div>
-							<label class="label" for="sign-in__email">
+					<fieldset class="form__fieldset">
+						<div class="form__group">
+							<label class="form__label" for="sign-in__email">
 								Email:
-								<input class="input-field" id="sign-in__email" type="email" name="email" placeholder="louishamford@gmail.com" autocomplete="email" required>
+								<input class="form__input-field" id="sign-in__email" type="email" name="email" placeholder="louishamford@gmail.com" autocomplete="email" required>
 							</label>
 						</div>
 
-						<div>
-							<label class="label" for="sign-in__password">
+						<div class="form__group">
+							<label class="form__label" for="sign-in__password">
 								Password:
-								<input class="input-field" id="sign-in__password" type="password" name="password" placeholder="Enter your password" autocomplete="current-password" required>
-								<a href="#" class="help">Forgot password?</a>
+								<input class="form__input-field" id="sign-in__password" type="password" name="password" placeholder="Enter your password" autocomplete="current-password" required>
 							</label>
 						</div>
 

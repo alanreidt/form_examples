@@ -4,6 +4,13 @@
 
 /* SETUP */
 
+:root {
+	--main-font-family: "Lato", sans-serif;
+	--secondary-font-family: "Sans Source Pro", sans-serif;
+	--base-font-size: 16px;
+	--site-padding: 30px;
+}
+
 html {
 	box-sizing: border-box;
 }
@@ -19,11 +26,25 @@ body {
 
 	font-family: var(--main-font-family);
 	font-size: var(--base-font-size);
+	color: #24292e;
 	background-color: #fff;
 }
 
 img {
 	max-width: 100%;
+}
+
+
+/* COMMON STYLES */
+
+/* %container */
+
+.container,
+.main-header__container,
+.section__header {
+	margin: auto;
+	padding-right: var(--site-padding);
+	padding-left: var(--site-padding);
 }
 
 
@@ -34,6 +55,113 @@ img {
 	MODULE
 	========================================================= */
 
+/* CONTAINER */
+
+.container {
+	max-width: 1260px;
+}
+
+
+/* PAGE */
+
+.page__title {
+	font-family: var(--secondary-font-family);
+	font-weight: 600;
+	line-height: 1.15;
+}
+
+
+/* SECTION */
+
+.section {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+.section__header {
+	max-width: 810px;
+	margin-bottom: 50px;
+
+	text-align: center;
+}
+
+.section__title {
+	margin-top: 0;
+	margin-bottom: ;
+
+	font-size: 28px;
+}
+
+.section__desc {
+	margin: 0;
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+
+/* FORM */
+
+.form {
+	max-width: 600px;
+	margin: auto;
+}
+
+.form__fieldset {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+.form__group {
+	margin-bottom: 10px;
+}
+
+.form__group::before,
+.form__group::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.form__input-field {
+
+}
+
+
+
+
+
 /* =========================================================
 	LAYOUT
 	========================================================= */
+
+/* MAIN HEADER */
+
+.main-header {
+	padding-top: 80px;
+	padding-bottom: 80px;
+
+	border-bottom: 2px solid #f0f0f0;
+	text-align: center;
+}
+
+.main-header__container {
+	max-width: 960px;
+}
+
+.main-header__title {
+	margin-bottom: 24px;
+	font-size: 36px;
+}
+
+.main-header__desc {
+	margin-bottom: 40px;
+	font-size: 20px;
+}
+
+.postscript {
+	margin: 0;
+
+	font-size: 18px;
+	color: #6f7780;
+}

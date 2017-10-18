@@ -3,6 +3,7 @@
 <head>
 	<title>Form examples</title>
 	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 	<link href="css/styles.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro:600" rel="stylesheet">
 </head>
@@ -10,13 +11,13 @@
 	<main class="page__content">
 		<header class="main-header">
 			<div class="main-header__container">
-				<h1 class="page__title  section__title  main-header__title">Form examples</h1>
+				<h1 class="page__title  main-header__title">Form examples</h1>
 				<p class="section__desc  main-header__desc">
 					Just samples of&nbsp;different forms. The long long long description about forms and its use cases.
 					Also about a&nbsp;life in&nbsp;different countries and travel. And several lifehacks. And that&nbsp;is. The end.
 				</p>
 
-				<p class="postscript">P.S. confirm fields are used only for training purposes.</p>
+				<p class="postscript">P.S. confirm fields and reset buttons are used only for training purposes.</p>
 			</div>
 		</header>
 
@@ -28,49 +29,50 @@
 					<p class="section__desc">
 						Here can be&nbsp;a&nbsp;description of&nbsp;a&nbsp;sign&nbsp;up form.
 						Also, a&nbsp;description about what the information is&nbsp;needed from an&nbsp;user and why.
+						And so on, and so on, and so on.
 					</p>
 				</header>
 
 				<form class="form" id="sign-up__form" name="sign-up-form" action="#">
 					<fieldset class="form__fieldset">
 						<div class="form__group">
+							<label class="form__label" for="sign-up__name">
+								Full Name:
+							</label>
+							<input class="form__input-field" id="sign-up__name" type="text" name="name" placeholder="Louis Hamford" maxlength="25" autocorrect="off" inputmode="latin-name" autocomplete="name" required>
+						</div>
+
+						<div class="form__group">
 							<label class="form__label" for="sign-up__email">
 								Email:
 							</label>
-							<input class="form__input-field" id="sign-up__email" type="email" name="email" placeholder="louishamford@gmail.com" maxlength="25" autocomplete="email" required>
+							<input class="form__input-field" id="sign-up__email" type="email" name="email" placeholder="louishamford@example.com" maxlength="25" spellcheck="false" autocomplete="email" required>
 						</div>
 
 						<div class="form__group">
 							<label class="form__label" for="sign-up__emailc">
 								Confirm Email:
-								<input class="form__input-field" id="sign-up__emailc" type="email" name="emailC" placeholder="louishamford@gmail.com" maxlength="25" autocomplete="email" required>
 							</label>
-						</div>
-
-						<div class="form__group">
-							<label class="form__label" for="sign-up__name">
-								Full Name:
-								<input class="form__input-field" id="sign-up__name" type="text" name="name" placeholder="Louis Hamford" inputmode="latin-name" autocomplete="name" required>
-							</label>
+							<input class="form__input-field" id="sign-up__emailc" type="email" name="emailC" placeholder="louishamford@example.com" maxlength="25" spellcheck="false" autocomplete="email" required>
 						</div>
 
 						<div class="form__group">
 							<label class="form__label" for="sign-up__password">
 								Password:
-								<input class="form__input-field" id="sign-up__password" type="password" name="password" placeholder="8+ characters" minlength="8" maxlength="30" autocomplete="new-password" required>
 							</label>
+							<input class="form__input-field" id="sign-up__password" type="password" name="password" placeholder="8+ characters" minlength="8" maxlength="20" autocomplete="new-password" required>
 						</div>
 
 						<div class="form__group">
 							<label class="form__label" for="sign-up__passwordc">
 								Confirm Password:
-								<input class="form__input-field" id="sign-up__passwordc" type="password" name="passwordC" placeholder="8+ characters" minlength="8" maxlength="30" autocomplete="new-password" required>
 							</label>
+							<input class="form__input-field" id="sign-up__passwordc" type="password" name="passwordC" placeholder="8+ characters" minlength="8" maxlength="20" autocomplete="new-password" required>
 						</div>
 
-						<div class="button-wrapper">
-							<button class="button" id="sign-up__submit">Sign up</button>
-							<button class="button  button_reset" id="sign-up__reset">Reset</button>
+						<div class="form__button-wrapper">
+							<button class="button  form__button" id="sign-up__submit">Sign up</button>
+							<button class="button  button_reset" id="sign-up__reset" type="reset">Reset</button>
 						</div>
 					</fieldset>
 				</form>
@@ -84,7 +86,7 @@
 					<p class="section__desc">
 						Here can be&nbsp;a&nbsp;description of&nbsp;a&nbsp;sign&nbsp;in form.
 						Also, a&nbsp;description about what the information is&nbsp;needed from an&nbsp;user and why.
-						And a&nbsp;text about something else, like a&nbsp;travel and several lifehacks. Yeah, that's enough.
+						And so on, and so on, and so on.
 					</p>
 				</header>
 
@@ -93,19 +95,19 @@
 						<div class="form__group">
 							<label class="form__label" for="sign-in__email">
 								Email:
-								<input class="form__input-field" id="sign-in__email" type="email" name="email" placeholder="louishamford@gmail.com" autocomplete="email" required>
 							</label>
+							<input class="form__input-field" id="sign-in__email" type="email" name="email" placeholder="dominiquerow@example.com" autocomplete="email" spellcheck="false" required>
 						</div>
 
 						<div class="form__group">
 							<label class="form__label" for="sign-in__password">
 								Password:
-								<input class="form__input-field" id="sign-in__password" type="password" name="password" placeholder="Enter your password" autocomplete="current-password" required>
 							</label>
+							<input class="form__input-field" id="sign-in__password" type="password" name="password" placeholder="Enter your password" autocomplete="current-password" required>
 						</div>
 
-						<div class="button-wrapper">
-							<button class="button" id="sign-in__submit">Sign in</button>
+						<div class="form__button-wrapper">
+							<button class="button  form__button" id="sign-in__submit">Sign in</button>
 							<button class="button  button_reset" id="sign-in__reset" type="reset">Reset</button>
 						</div>
 					</fieldset>
@@ -113,6 +115,8 @@
 			</div>
 		</section>
 	</main>
+
+	<div class="spacer"></div>
 
 	<script src="js/app.js"></script>
 </body>

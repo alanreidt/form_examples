@@ -37,7 +37,7 @@
 					<fieldset class="form__fieldset">
 						<div class="form__group">
 							<label class="form__label" for="sign-up__name">
-								Full Name:
+								Full name:
 							</label>
 							<input class="form__input-field" id="sign-up__name" type="text" name="name" placeholder="Louis Hamford" maxlength="25" autocorrect="off" inputmode="latin-name" autocomplete="name" required>
 						</div>
@@ -51,7 +51,7 @@
 
 						<div class="form__group">
 							<label class="form__label" for="sign-up__emailc">
-								Confirm Email:
+								Confirm email:
 							</label>
 							<input class="form__input-field" id="sign-up__emailc" type="email" name="emailC" placeholder="louishamford@example.com" maxlength="25" spellcheck="false" autocomplete="email" required>
 						</div>
@@ -65,13 +65,13 @@
 
 						<div class="form__group">
 							<label class="form__label" for="sign-up__passwordc">
-								Confirm Password:
+								Confirm password:
 							</label>
 							<input class="form__input-field" id="sign-up__passwordc" type="password" name="passwordC" placeholder="8+ characters" minlength="8" maxlength="20" autocomplete="new-password" required>
 						</div>
 
 						<div class="form__button-wrapper">
-							<button class="button  form__button" id="sign-up__submit">Sign up</button>
+							<button class="button" id="sign-up__submit">Sign up</button>
 							<button class="button  button_reset" id="sign-up__reset" type="reset">Reset</button>
 						</div>
 					</fieldset>
@@ -96,7 +96,7 @@
 							<label class="form__label" for="sign-in__email">
 								Email:
 							</label>
-							<input class="form__input-field" id="sign-in__email" type="email" name="email" placeholder="dominiquerow@example.com" autocomplete="email" spellcheck="false" required>
+							<input class="form__input-field" id="sign-in__email" type="email" name="email" placeholder="georgerowlett@example.com" spellcheck="false" autocomplete="email" required>
 						</div>
 
 						<div class="form__group">
@@ -107,8 +107,201 @@
 						</div>
 
 						<div class="form__button-wrapper">
-							<button class="button  form__button" id="sign-in__submit">Sign in</button>
+							<button class="button" id="sign-in__submit">Sign in</button>
 							<button class="button  button_reset" id="sign-in__reset" type="reset">Reset</button>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</section>
+
+		<section class="section  checkout">
+			<div class="container">
+				<header class="section__header">
+					<h2 class="page__title  section__title">Checkout form</h2>
+					<p class="section__desc">
+						Here can be&nbsp;a&nbsp;description of&nbsp;a&nbsp;checkout form.
+						Also, a&nbsp;description about what the information is&nbsp;needed from an&nbsp;user and why.
+						And so on, and so on, and so on.
+					</p>
+				</header>
+
+				<form class="form" id="checkout__form" name="checkout-form" action="#">
+					<ul class="progress-bar" id="checkout__progress-bar">
+						<li class="progress-bar__item  progress-bar__item_active"><a class="progress-bar__link">General</a></li>
+						<li class="progress-bar__item"><a class="progress-bar__link" id="shipping">Shipping</a></li>
+						<li class="progress-bar__item"><a class="progress-bar__link">Billing</a></li>
+						<li class="progress-bar__item"><a class="progress-bar__link">Payment</a></li>
+					</ul>
+
+					<fieldset class="form__fieldset" id="checkout__first-item">
+						<div class="form__group">
+							<label class="form__label" for="checkout__name">
+								Full name:
+							</label>
+							<input class="form__input-field" id="checkout__name" type="text" name="name" placeholder="Elizabeth Clarkson" maxlength="25" autocorrect="off" inputmode="latin-name" autocomplete="name" required>
+						</div>
+
+						<div class="form__group">
+							<label class="form__label" for="checkout__email">
+								Email:
+							</label>
+							<input class="form__input-field" id="checkout__email" type="email" name="email" placeholder="elizabethclarkson@example.com" maxlength="25" spellcheck="false" autocomplete="email" required>
+						</div>
+
+						<div class="form__group">
+							<label class="form__label" for="checkout__mobile">
+								Phone number:
+							</label>
+							<input class="form__input-field" id="checkout__mobile" type="tel" name="mobile" placeholder="+1-541-754-3010" maxlength="20" size="20" autocomplete="tel" required>
+						</div>
+
+						<div class="form__button-wrapper">
+							<button class="button" type="button">Continue</button>
+							<button class="button  button_reset" type="reset">Reset</button>
+						</div>
+					</fieldset>
+
+					<fieldset class="form__fieldset  form__fieldset_temporary" id="checkout__second-item">
+						<div class="form__group">
+							<label class="form__label" for="checkout__ship-country">
+								Country:
+							</label>
+							<select class="form__select" id="checkout__ship-country" name="ship-country" required>
+								<option value="">--</option>
+								<option value="US" selected>United States</option>
+								<option value="RU">Russian Federation</option>
+								<option value="CN">China</option>
+							</select>
+						</div>
+
+						<div class="form__group">
+							<label class="form__label" for="checkout__ship-address-line1">
+								Address line 1:
+							</label>
+							<input class="form__input-field" id="checkout__ship-address-line1" type="text" name="ship-address-line1" placeholder="Street address, P.O. box, company name" maxlength="60" autocomplete="shipping address-line1" required>
+						</div>
+
+						<div class="form__group">
+							<label class="form__label" for="checkout__ship-address-line2">
+								Address line 2:
+							</label>
+							<input class="form__input-field" id="checkout__ship-address-line2" type="text" name="ship-address-line2" placeholder="Apartment, suite, unit, building, floor, etc." maxlength="60" autocomplete="shipping address-line2">
+						</div>
+
+						<div class="form__group">
+							<label class="form__label" for="checkout__ship-locality">
+								City:
+							</label>
+							<input class="form__input-field" id="checkout__ship-locality" type="text" name="ship-locality" placeholder="New York" maxlength="50" autocomplete="shipping address-level2" required>
+						</div>
+
+						<div class="form__group">
+							<label class="form__label" for="checkout__ship-region">
+								State / Province / Region:
+							</label>
+							<input class="form__input-field" id="checkout__ship-region" type="text" name="ship-region" placeholder="NY" maxlength="50" autocomplete="shipping address-level1">
+						</div>
+
+						<div class="form__group">
+							<label class="form__label" for="checkout__ship-postal-code">
+								Zip code (US):
+							</label>
+							<input class="form__input-field" id="checkout__ship-postal-code" type="text" name="ship-postal-code" placeholder="10011" size="20" maxlength="20" pattern="^\d{5,6}(?:[-\s]\d{4})?$" inputmode="numeric" autocomplete="shipping postal-code">
+						</div>
+
+						<div class="form__button-wrapper">
+							<button class="button" type="button">Continue</button>
+							<button class="button  button_reset" type="reset">Reset</button>
+						</div>
+					</fieldset>
+
+					<fieldset class="form__fieldset  form__fieldset_temporary" id="checkout__third-item">
+						<div class="form__group">
+							<label class="form__label" for="checkout__bill-country">
+								Country:
+							</label>
+							<select class="form__select" id="checkout__bill-country" name="bill-country" required>
+								<option value="">--</option>
+								<option value="US" selected>United States</option>
+								<option value="RU">Russian Federation</option>
+								<option value="CN">China</option>
+							</select>
+						</div>
+
+						<div class="form__group">
+							<label class="form__label" for="checkout__bill-address-line1">
+								Address line 1:
+							</label>
+							<input class="form__input-field" id="checkout__bill-address-line1" type="text" name="bill-address-line1" placeholder="Street address, P.O. box, company name" maxlength="60" autocomplete="billing address-line1" required>
+						</div>
+
+						<div class="form__group">
+							<label class="form__label" for="checkout__bill-address-line2">
+								Address line 2:
+							</label>
+							<input class="form__input-field" id="checkout__bill-address-line2" type="text" name="bill-address-line2" placeholder="Apartment, suite, unit, building, floor, etc." maxlength="60" autocomplete="billing address-line2">
+						</div>
+
+						<div class="form__group">
+							<label class="form__label" for="checkout__bill-locality">
+								City:
+							</label>
+							<input class="form__input-field" id="checkout__bill-locality" type="text" name="bill-locality" placeholder="Mountain view" maxlength="50" autocomplete="billing address-level2" required>
+						</div>
+
+						<div class="form__group">
+							<label class="form__label" for="checkout__bill-region">
+								State / Province / Region:
+							</label>
+							<input class="form__input-field" id="checkout__bill-region" type="text" name="bill-region" placeholder="CA" maxlength="50" autocomplete="billing address-level1">
+						</div>
+
+						<div class="form__group">
+							<label class="form__label" for="checkout__bill-postal-code">
+								Zip code (US):
+							</label>
+							<input class="form__input-field" id="checkout__bill-postal-code" type="text" name="bill-postal-code" placeholder="94043" maxlength="20" size="20" pattern="^\d{5,6}(?:[-\s]\d{4})?$" inputmode="numeric" autocomplete="billing postal-code">
+						</div>
+
+						<div class="form__button-wrapper">
+							<button class="button" type="button">Continue</button>
+							<button class="button  button_reset" type="reset">Reset</button>
+						</div>
+					</fieldset>
+
+					<fieldset class="form__fieldset  form__fieldset_temporary" id="checkout__fourth-item">
+						<div class="form__group">
+							<label class="form__label" for="checkout__ccname">
+								Name on card:
+							</label>
+							<input class="form__input-field" id="checkout__ccname" type="text" name="ccname" placeholder="ELIZABETH CLARKSON" maxlength="25" autocomplete="cc-name" required>
+						</div>
+
+						<div class="form__group">
+							<label class="form__label" for="checkout__cardnumber">
+								Credit card number:
+							</label>
+							<input class="form__input-field" id="checkout__cardnumber" type="text" name="cardnumber" placeholder="16&ndash;19 digits on front of card" minlength="12" maxlength="19" pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|6(?:011|5[0-9]{2})[0-9]{12}|(?:2131|1800|35\d{3})\d{11})$" inputmode="numeric" autocomplete="cc-number" required>
+						</div>
+
+						<div class="form__group">
+							<label class="form__label" for="checkout__exp-date">
+								Expiration date:
+							</label>
+							<input class="form__input-field" id="checkout__exp-date" type="text" name="exp-date" placeholder="MM/YY" size="7" inputmode="numeric" autocomplete="cc-exp" required>
+						</div>
+
+						<div class="form__group">
+							<label class="form__label" for="checkout__cvc">
+								CVC:
+							</label>
+							<input class="form__input-field" id="checkout__cvc" type="text" name="cvc" placeholder="3&ndash;4 digits on front or back of card" minlength="3" maxlength="4" size="4" inputmode="numeric" autocomplete="cc-csc" required>
+						</div>
+
+						<div class="form__button-wrapper">
+							<button class="button" type="submit">Place order</button>
+							<button class="button  button_reset" type="reset">Reset</button>
 						</div>
 					</fieldset>
 				</form>

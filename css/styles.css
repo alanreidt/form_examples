@@ -118,15 +118,97 @@ button.button {
 			  transform: translate3d(0, -3px, 0);
 }
 
+.button:active {
+	box-shadow: 0 4px 5px rgba(0, 0, 0, .15);
+
+	-webkit-transform: translate3d(0, 0, 0);
+			  transform: translate3d(0, 0, 0);
+}
+
 .button_reset {
 	color: #24292e;
 	background-color: #fff;
 	border-color: #24292e;
 }
 
-.button_reset:hover,
-.button_reset:focus {
-	background-color: #fff;
+
+/* PROGRESS BAR */
+
+:root {
+	--progress-bar-height: 40px;
+	--progress-bar-item-width: 90px;
+}
+
+.progress-bar {
+	margin: 0;
+	padding-left: 0;
+	list-style-type: none;
+
+	/*width: 300px;*/
+	display: table;
+	margin: auto;
+	margin-bottom: 40px;
+
+	height: var(--progress-bar-height);
+	line-height: var(--progress-bar-height);
+
+	font-size: 0;
+	background: linear-gradient(#24292e, #24292e) left / var(--progress-bar-item-width) 100% no-repeat;
+	border: 2px solid #24292e;
+	border-radius: 3px;
+	box-sizing: content-box;
+
+	-webkit-transition: background-position .4s ease;
+			  transition: background-position .4s ease;
+}
+
+.progress-bar_active_second {
+	background-position: var(--progress-bar-item-width);
+}
+
+.progress-bar_active_third {
+	background-position: calc(var(--progress-bar-item-width) * 2);
+}
+
+.progress-bar_active_fourth {
+	background-position: right;
+}
+
+.progress-bar__item {
+	display: inline-block;
+	vertical-align: middle;
+
+	width: var(--progress-bar-item-width);
+	box-sizing: border-box;
+
+	color: #24292e;
+	background: linear-gradient(#24292e, #24292e) right / 2px 100% no-repeat;
+
+	-webkit-transition: all .4s ease; /* edit */
+			  transition: all .4s ease;
+}
+
+.progress-bar__item_active {
+	color: #fff;
+}
+
+.progress-bar__item:last-child {
+	background-size: 0 100%;
+}
+
+.progress-bar__item:hover {
+	/*color: #fff;*/
+	/*background-size: 100% 100%;*/
+}
+
+.progress-bar__link {
+	color: inherit;
+	text-decoration: none;
+
+	display: block;
+
+	font-size: 18px;
+	text-align: center;
 }
 
 
@@ -181,6 +263,10 @@ button.button {
 	border: none;
 }
 
+.form__fieldset_temporary {
+	margin-top: 50px; /* delete */
+}
+
 .form__group {
 	margin-bottom: 20px;
 	font-size: 0;
@@ -195,7 +281,7 @@ button.button {
 
 	font-size: 18px;
 	text-align: right;
-	text-transform: capitalize;
+	/*text-transform: capitalize;*/
 
 	-webkit-user-select: none;
 		-moz-user-select: none;
@@ -215,7 +301,18 @@ button.button {
 	color: inherit;
 	border: 1px solid rgba(0, 0, 0, .25);
 	border-radius: 3px;
-	box-shadow: none;
+}
+
+.form__select {
+	display: inline-block;
+	vertical-align: middle;
+
+	width: 70%;
+	padding: 5px;
+
+	font-family: inherit;
+	font-size: var(--base-font-size);
+	color: inherit;
 }
 
 .form__input-field::-webkit-input-placeholder {
@@ -245,8 +342,8 @@ button.button {
 	text-align: right;
 }
 
-.form__button {
-	margin-right: 10px;
+.form__button-wrapper button:not(:last-child) {
+	margin-right: 5px;
 }
 
 

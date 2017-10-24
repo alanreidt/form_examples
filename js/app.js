@@ -26,13 +26,20 @@ submit.onclick = function() {
 
 // Confirm window before reset form execution
 
-var form = document.getElementById('sign-up__form');
+var forms = document.getElementsByClassName('form');
+var forms_len = forms.length;
 
-form.addEventListener('reset', function(evt) {
+var confirmReset = function(evt) {
 	if (!confirm('Are you sure?')) {
 		evt.preventDefault();
 	}
-});
+};
+
+for (var i = 0; i < forms_len; i++) {
+	var form = forms[i];
+
+	addEventListener('reset', confirmReset);
+}
 
 // progress-bar (don`t work)
 

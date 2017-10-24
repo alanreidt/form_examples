@@ -23,3 +23,22 @@ submit.onclick = function() {
 		passwordc.setCustomValidity("");
 	}
 };
+
+// Confirm window before reset form execution
+
+var form = document.getElementById('sign-up__form');
+
+form.addEventListener('reset', function(evt) {
+	if (!confirm('Are you sure?')) {
+		evt.preventDefault();
+	}
+});
+
+// progress-bar (don`t work)
+
+var shipping = document.getElementById('shipping');
+
+shipping.onclick = function() {
+	alert("alarm");
+	this.classList.toggle('progress-bar__link_active', true);
+};

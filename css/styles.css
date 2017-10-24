@@ -342,7 +342,7 @@ button.button {
 	text-align: right;
 }
 
-.form__button-wrapper button:not(:last-child) {
+.form__button-wrapper .button:not(:last-child) {
 	margin-right: 5px;
 }
 

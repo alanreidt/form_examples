@@ -162,6 +162,10 @@ button.button {
 			  transition: background-position .4s ease;
 }
 
+.progress-bar_active_first {
+	background-position: left;
+}
+
 .progress-bar_active_second {
 	background-position: var(--progress-bar-item-width);
 }

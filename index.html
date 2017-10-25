@@ -127,11 +127,11 @@
 				</header>
 
 				<form class="form" id="checkout__form" name="checkout-form" action="#">
-					<ul class="progress-bar" id="checkout__progress-bar">
-						<li class="progress-bar__item  progress-bar__item_active"><a class="progress-bar__link">General</a></li>
-						<li class="progress-bar__item"><a class="progress-bar__link" id="shipping">Shipping</a></li>
-						<li class="progress-bar__item"><a class="progress-bar__link">Billing</a></li>
-						<li class="progress-bar__item"><a class="progress-bar__link">Payment</a></li>
+					<ul class="progress-bar  progress-bar_active_first" id="checkout__progress-bar">
+						<li class="progress-bar__item  progress-bar__item_active" id="first" tabindex="5"><a class="progress-bar__link">General</a></li>
+						<li class="progress-bar__item" id="second" tabindex="5"><a class="progress-bar__link">Shipping</a></li>
+						<li class="progress-bar__item" id="third" tabindex="5"><a class="progress-bar__link">Billing</a></li>
+						<li class="progress-bar__item" id="fourth" tabindex="5"><a class="progress-bar__link">Payment</a></li>
 					</ul>
 
 					<fieldset class="form__fieldset" id="checkout__first-item">

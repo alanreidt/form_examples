@@ -44,39 +44,56 @@ for (var i = 0; i < forms_len; i++) {
 // Progress-bar toggle
 
 // TODO:
-//   clean up functions;
+//   clean up functions (replace for loops by forEach method, concatenate toggleElemClass and toggleElemsClass functions);
 //   edit a progress-bar__items' id;
 //   edit progress-bar styles;
 
 var progressBarItems = document.getElementsByClassName('progress-bar__item');
 var progressBarItems_len = progressBarItems.length;
 
-var addProgressBarActiveClass = function() {
-	var items = document.getElementsByClassName('progress-bar__item');
-	var items_len = items.length;
-
-	var progressBar = document.getElementById('checkout__progress-bar');
-	var progressBarClass = 'progress-bar_active_' + this.id;
-
-	for (var i = 0; i < items_len; i++) {
-		var item = items[i];
-
-		removeClass('progress-bar__item_active', item);
-	}
-
-	this.classList.toggle('progress-bar__item_active', true);
-
-	progressBar.classList.toggle(progressBar.classList[1], false);
-	progressBar.classList.toggle(progressBarClass, true);
-};
-
-var removeClass = function(cls, elem) {
-	elem.classList.toggle(cls, false);
-};
-
 for (var i = 0; i < progressBarItems_len; i++) {
 	var progressBarItem = progressBarItems[i];
 
-	progressBarItem.addEventListener('click', addProgressBarActiveClass);
-	progressBarItem.addEventListener('keypress', addProgressBarActiveClass);
+	progressBarItem.addEventListener('click', toggleProgressBar);
+	progressBarItem.addEventListener('keypress', toggleProgressBar);
+}
+
+
+function toggleProgressBar() {
+	var progressBarItems = document.getElementsByClassName('progress-bar__item');
+	var progressBarItemsAddedClass = 'progress-bar__item_active';
+	var progressBarItemsRemovedClass = 'progress-bar__item_active';
+
+	var progressBar = document.getElementById('checkout__progress-bar');
+	var progressBarAddedClass = 'progress-bar_active_' + this.id;
+	var progressBarRemovedClass = progressBar.classList[1];
+
+	toggleElemsClass(progressBarItemsAddedClass, progressBarItemsRemovedClass, progressBarItems, this);
+
+	toggleElemClass(progressBarAddedClass, progressBarRemovedClass, progressBar);
+}
+
+function toggleElemClass(addedClass, removedClass, elem) {
+	removeClass(removedClass, elem);
+	addClass(addedClass, elem);
+}
+
+function toggleElemsClass(addedClass, removedClass, arrOfSublings, elem) {
+	var sublings = arrOfSublings;
+
+	for (var i = 0; i < sublings.length; i++) {
+		var subling = sublings[i];
+
+		removeClass(removedClass, subling);
+	}
+
+	addClass(addedClass, elem);
+}
+
+function addClass(cls, elem) {
+	elem.classList.toggle(cls, true);
+}
+
+function removeClass(cls, elem) {
+	elem.classList.toggle(cls, false);
 }

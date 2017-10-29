@@ -144,7 +144,6 @@ button.button {
 	padding-left: 0;
 	list-style-type: none;
 
-	/*width: 300px;*/
 	display: table;
 	margin: auto;
 	margin-bottom: 40px;
@@ -156,10 +155,10 @@ button.button {
 	background: linear-gradient(#24292e, #24292e) left / var(--progress-bar-item-width) 100% no-repeat;
 	border: 2px solid #24292e;
 	border-radius: 3px;
-	box-sizing: content-box;
+	box-sizing: content-box; /* allows to use a predetermined line-height */
 
-	-webkit-transition: background-position .4s ease;
-			  transition: background-position .4s ease;
+	-webkit-transition: background-position 0.4s ease;
+			  transition: background-position 0.4s ease;
 }
 
 .progress-bar_active_first-item {
@@ -185,8 +184,16 @@ button.button {
 	width: var(--progress-bar-item-width);
 	box-sizing: border-box;
 
+	font-size: 18px;
 	color: #24292e;
 	background: linear-gradient(#24292e, #24292e) right / 2px 100% no-repeat;
+	text-align: center;
+	cursor: pointer;
+
+	-webkit-user-select: none;
+		-moz-user-select: none;
+		 -ms-user-select: none;
+			  user-select: none;
 
 	-webkit-transition: all .4s ease; /* edit */
 			  transition: all .4s ease;
@@ -198,21 +205,6 @@ button.button {
 
 .progress-bar__item:last-child {
 	background-size: 0 100%;
-}
-
-.progress-bar__item:hover {
-	/*color: #fff;*/
-	/*background-size: 100% 100%;*/
-}
-
-.progress-bar__link {
-	color: inherit;
-	text-decoration: none;
-
-	display: block;
-
-	font-size: 18px;
-	text-align: center;
 }
 
 

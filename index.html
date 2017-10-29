@@ -39,40 +39,40 @@
 							<label class="form__label" for="sign-up__name">
 								Full name:
 							</label>
-							<input class="form__input-field" id="sign-up__name" type="text" name="name" placeholder="Louis Hamford" maxlength="25" autocorrect="off" inputmode="latin-name" autocomplete="name" required>
+							<input class="form__input-field" id="sign-up__name" type="text" name="name" placeholder="Louis Hamford" tabindex="1" maxlength="25" autocorrect="off" inputmode="latin-name" autocomplete="name" required>
 						</div>
 
 						<div class="form__group">
 							<label class="form__label" for="sign-up__email">
 								Email:
 							</label>
-							<input class="form__input-field" id="sign-up__email" type="email" name="email" placeholder="louishamford@example.com" maxlength="25" spellcheck="false" autocomplete="email" required>
+							<input class="form__input-field" id="sign-up__email" type="email" name="email" placeholder="louishamford@example.com" tabindex="1" maxlength="25" spellcheck="false" autocomplete="email" required>
 						</div>
 
 						<div class="form__group">
 							<label class="form__label" for="sign-up__emailc">
 								Confirm email:
 							</label>
-							<input class="form__input-field" id="sign-up__emailc" type="email" name="emailC" placeholder="louishamford@example.com" maxlength="25" spellcheck="false" autocomplete="email" required>
+							<input class="form__input-field" id="sign-up__emailc" type="email" name="emailC" placeholder="louishamford@example.com" tabindex="1" maxlength="25" spellcheck="false" autocomplete="email" required>
 						</div>
 
 						<div class="form__group">
 							<label class="form__label" for="sign-up__password">
 								Password:
 							</label>
-							<input class="form__input-field" id="sign-up__password" type="password" name="password" placeholder="8+ characters" minlength="8" maxlength="20" autocomplete="new-password" required>
+							<input class="form__input-field" id="sign-up__password" type="password" name="password" placeholder="8+ characters" tabindex="1" minlength="8" maxlength="20" autocomplete="new-password" required>
 						</div>
 
 						<div class="form__group">
 							<label class="form__label" for="sign-up__passwordc">
 								Confirm password:
 							</label>
-							<input class="form__input-field" id="sign-up__passwordc" type="password" name="passwordC" placeholder="8+ characters" minlength="8" maxlength="20" autocomplete="new-password" required>
+							<input class="form__input-field" id="sign-up__passwordc" type="password" name="passwordC" placeholder="8+ characters" tabindex="1" minlength="8" maxlength="20" autocomplete="new-password" required>
 						</div>
 
 						<div class="form__button-wrapper">
-							<button class="button" id="sign-up__submit">Sign up</button>
-							<button class="button  button_reset" id="sign-up__reset" type="reset">Reset</button>
+							<button class="button" id="sign-up__submit" tabindex="1">Sign up</button>
+							<button class="button  button_reset" id="sign-up__reset" type="reset" tabindex="1">Reset</button>
 						</div>
 					</fieldset>
 				</form>
@@ -96,19 +96,19 @@
 							<label class="form__label" for="sign-in__email">
 								Email:
 							</label>
-							<input class="form__input-field" id="sign-in__email" type="email" name="email" placeholder="georgerowlett@example.com" spellcheck="false" autocomplete="email" required>
+							<input class="form__input-field" id="sign-in__email" type="email" name="email" placeholder="georgerowlett@example.com" tabindex="2" spellcheck="false" autocomplete="email" required>
 						</div>
 
 						<div class="form__group">
 							<label class="form__label" for="sign-in__password">
 								Password:
 							</label>
-							<input class="form__input-field" id="sign-in__password" type="password" name="password" placeholder="Enter your password" autocomplete="current-password" required>
+							<input class="form__input-field" id="sign-in__password" type="password" name="password" placeholder="Enter your password" tabindex="2" autocomplete="current-password" required>
 						</div>
 
 						<div class="form__button-wrapper">
-							<button class="button" id="sign-in__submit">Sign in</button>
-							<button class="button  button_reset" id="sign-in__reset" type="reset">Reset</button>
+							<button class="button" id="sign-in__submit" tabindex="2">Sign in</button>
+							<button class="button  button_reset" id="sign-in__reset" type="reset" tabindex="2">Reset</button>
 						</div>
 					</fieldset>
 				</form>
@@ -127,11 +127,11 @@
 				</header>
 
 				<form class="form" id="checkout__form" name="checkout-form" action="#">
-					<ul class="progress-bar  progress-bar_active_first" id="checkout__progress-bar">
-						<li class="progress-bar__item  progress-bar__item_active" id="first" tabindex="5"><a class="progress-bar__link">General</a></li>
-						<li class="progress-bar__item" id="second" tabindex="5"><a class="progress-bar__link">Shipping</a></li>
-						<li class="progress-bar__item" id="third" tabindex="5"><a class="progress-bar__link">Billing</a></li>
-						<li class="progress-bar__item" id="fourth" tabindex="5"><a class="progress-bar__link">Payment</a></li>
+					<ul class="progress-bar  progress-bar_active_first-item" id="checkout__progress-bar">
+						<li class="progress-bar__item  progress-bar__item_active" id="progress-bar__first-item" tabindex="3"><a class="progress-bar__link">General</a></li>
+						<li class="progress-bar__item" id="progress-bar__second-item" tabindex="3"><a class="progress-bar__link">Shipping</a></li>
+						<li class="progress-bar__item" id="progress-bar__third-item" tabindex="3"><a class="progress-bar__link">Billing</a></li>
+						<li class="progress-bar__item" id="progress-bar__fourth-item" tabindex="3"><a class="progress-bar__link">Payment</a></li>
 					</ul>
 
 					<fieldset class="form__fieldset" id="checkout__first-item">

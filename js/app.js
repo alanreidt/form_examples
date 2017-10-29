@@ -44,33 +44,53 @@ for (var i = 0; i < forms_len; i++) {
 // Progress-bar toggle
 
 // TODO:
-//   clean up functions (replace for loops by forEach method, concatenate toggleElemClass and toggleElemsClass functions);
-//   edit a progress-bar__items' id;
+//   clean up functions;
+//   toggleElemClass() ( toggleElemMod() or changeElemClass() );
+//   +edit a progress-bar modifier;
 //   edit progress-bar styles;
 
 var progressBarItems = document.getElementsByClassName('progress-bar__item');
-var progressBarItems_len = progressBarItems.length;
 
-for (var i = 0; i < progressBarItems_len; i++) {
+for (var i = 0; i < progressBarItems.length; i++) {
 	var progressBarItem = progressBarItems[i];
 
-	progressBarItem.addEventListener('click', toggleProgressBar);
-	progressBarItem.addEventListener('keypress', toggleProgressBar);
+	progressBarItem.addEventListener('click', toggleProgressBarItem);
+	progressBarItem.addEventListener('keypress', toggleProgressBarItem);
 }
 
-
-function toggleProgressBar() {
-	var progressBarItems = document.getElementsByClassName('progress-bar__item');
-	var progressBarItemsAddedClass = 'progress-bar__item_active';
-	var progressBarItemsRemovedClass = 'progress-bar__item_active';
+function toggleProgressBarItem() {
+	// var progressBarItems = document.getElementsByClassName('progress-bar__item');
+	var progressBarItemActivatingClass = 'progress-bar__item_active';
 
 	var progressBar = document.getElementById('checkout__progress-bar');
-	var progressBarAddedClass = 'progress-bar_active_' + this.id;
-	var progressBarRemovedClass = progressBar.classList[1];
+	var progressBarAddedClass = 'progress-bar_active_' + cutBemElem(this.id);
+	// console.log(progressBarAddedClass);
+	var progressBarRemovedClass = progressBar.classList[1]; /* edit - what if there is more than one class? */
 
-	toggleElemsClass(progressBarItemsAddedClass, progressBarItemsRemovedClass, progressBarItems, this);
+	activateElem(progressBarItemActivatingClass, progressBarItems, this);
 
 	toggleElemClass(progressBarAddedClass, progressBarRemovedClass, progressBar);
+}
+
+// console.log( 'progress-bar__first-item_active'.slice(14, 24) );
+// console.log( ~('progress-bar__first-item_active'.indexOf('__')) );
+// console.log( cutBemElem('progress-bar__first-item') );
+
+function cutBemElem(nameStr) {
+	var blockIndex = nameStr.indexOf('__') + 2;
+	var modIndex = nameStr.indexOf('_', blockIndex);
+
+	if ( ~(blockIndex - 2) && ~modIndex ) {
+		var result = nameStr.slice(blockIndex, modIndex);
+	} else if ( ~(blockIndex - 2) ) {
+		var result = nameStr.slice(blockIndex);
+	} else if (~modIndex) {
+		var result = nameStr.slice(0, modIndex);
+	} else {
+		var result = nameStr;
+	}
+
+	return result;
 }
 
 function toggleElemClass(addedClass, removedClass, elem) {
@@ -78,16 +98,16 @@ function toggleElemClass(addedClass, removedClass, elem) {
 	addClass(addedClass, elem);
 }
 
-function toggleElemsClass(addedClass, removedClass, arrOfSublings, elem) {
+function activateElem(activatingClass, arrOfSublings, elem) {
 	var sublings = arrOfSublings;
 
 	for (var i = 0; i < sublings.length; i++) {
 		var subling = sublings[i];
 
-		removeClass(removedClass, subling);
+		removeClass(activatingClass, subling);
 	}
 
-	addClass(addedClass, elem);
+	addClass(activatingClass, elem);
 }
 
 function addClass(cls, elem) {

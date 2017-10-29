@@ -162,20 +162,20 @@ button.button {
 			  transition: background-position .4s ease;
 }
 
-.progress-bar_active_first {
+.progress-bar_active_first-item {
 	background-position: left;
 }
 
-.progress-bar_active_second {
+.progress-bar_active_second-item {
 	background-position: var(--progress-bar-item-width);
 }
 
-.progress-bar_active_third {
+.progress-bar_active_third-item {
 	background-position: calc(var(--progress-bar-item-width) * 2);
 }
 
-.progress-bar_active_fourth {
-	background-position: right;
+.progress-bar_active_fourth-item {
+	background-position: calc(var(--progress-bar-item-width) * 3);
 }
 
 .progress-bar__item {

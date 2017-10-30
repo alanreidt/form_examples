@@ -259,10 +259,6 @@ button.button {
 	border: none;
 }
 
-.form__fieldset_temporary {
-	margin-top: 50px; /* delete */
-}
-
 .form__group {
 	margin-bottom: 20px;
 	font-size: 0;
@@ -342,6 +338,30 @@ button.button {
 	margin-right: 5px;
 }
 
+/* SLIDER */
+
+.slider {
+	position: relative;
+}
+
+.slider__item {
+	position: absolute;
+	z-index: 300;
+	top: 0; left: 0;
+	width: 100%;
+
+	opacity: 0;
+	pointer-events: none;
+
+	-webkit-transition: opacity 0.4s ease-in;
+	transition: opacity 0.4s ease-in;
+}
+
+.slider__item_active {
+	opacity: 1;
+	pointer-events: auto;
+}
+
 
 
 
@@ -379,4 +399,11 @@ button.button {
 
 	font-size: 18px;
 	color: #6F7780;
+}
+
+
+/* CHECKOUT */
+
+.checkout__form {
+	height: 470px;
 }

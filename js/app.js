@@ -46,8 +46,10 @@ for (var i = 0; i < forms_len; i++) {
 // TODO:
 //   clean up functions;
 //   toggleElemClass() ( toggleElemMod() or changeElemClass() );
-//   +edit a progress-bar modifier;
-//   edit progress-bar styles;
+// + edit a progress-bar modifier;
+// + edit the progress-bar styles;
+//   edit the slider__item styles;
+//   make the slider component independent;
 
 var progressBarItems = document.getElementsByClassName('progress-bar__item');
 
@@ -59,17 +61,53 @@ for (var i = 0; i < progressBarItems.length; i++) {
 }
 
 function toggleProgressBarItem() {
-	// var progressBarItems = document.getElementsByClassName('progress-bar__item');
-	var progressBarItemActivatingClass = 'progress-bar__item_active';
-
 	var progressBar = document.getElementById('checkout__progress-bar');
 	var progressBarAddedClass = 'progress-bar_active_' + cutBemElem(this.id);
 	// console.log(progressBarAddedClass);
 	var progressBarRemovedClass = progressBar.classList[1]; /* edit - what if there is more than one class? */
 
+	// var progressBarItems = document.getElementsByClassName('progress-bar__item');
+	var progressBarItemActivatingClass = 'progress-bar__item_active';
+
+	var sliderItems = document.getElementsByClassName('slider__item');
+	var sliderItemActivatingClass = 'slider__item_active';
+	var selectedSliderItem = getRelatedElem(sliderItems, progressBarItems, this);
+
 	activateElem(progressBarItemActivatingClass, progressBarItems, this);
 
 	toggleElemClass(progressBarAddedClass, progressBarRemovedClass, progressBar);
+
+	activateElem(sliderItemActivatingClass, sliderItems, selectedSliderItem);
+}
+
+function getRelatedElem(arrOfRelatedElems, arrOfElems, elem) {
+	// rename arguments;
+	var elemIndex = identifyIndex(arrOfElems, elem);
+	var relatedElem = getElemByIndex(arrOfRelatedElems, elemIndex);
+
+	return relatedElem;
+}
+
+function identifyIndex(arrOfElems, elem) {
+	for (var i = 0; i < arrOfElems.length; i++) {
+		if (arrOfElems[i] !== elem) continue;
+
+		return i;
+	}
+
+	return -1;
+}
+
+function getElemByIndex(arrOfElems, index) {
+	var elems = arrOfElems;
+
+	for (var i = 0; i < elems.length; i++) {
+		var elem = elems[i];
+
+		if (i !== index) continue;
+
+		return elem;
+	}
 }
 
 // console.log( 'progress-bar__first-item_active'.slice(14, 24) );
